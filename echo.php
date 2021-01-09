@@ -8,16 +8,14 @@
 </head>
 
 <body>
-    <?php 
-   
-   echo "Hello World"."\n";
+    <?php
 
-   echo 'This ','string ','was ','made ','with multiple parameters. ';
-   echo 'This '.'string '.'was '.'concatenated';
+echo "Hello World" . "\n";
 
-   
-   
-   ?>
+echo 'This ', 'string ', 'was ', 'made ', 'with multiple parameters. ';
+echo 'This ' . 'string ' . 'was ' . 'concatenated';
+
+?>
 
 </body>
 
