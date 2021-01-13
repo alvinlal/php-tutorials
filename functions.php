@@ -6,7 +6,7 @@
  sayHello("alvin");
 
  function getlist($product) {
-  return "<h1>{$product['name']} costs {$product['price']}";
+  return "<h1>{$product['name']} costs {$product['price']}</h1>";
  }
 ?>
 <!DOCTYPE html>
