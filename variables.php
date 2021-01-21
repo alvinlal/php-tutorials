@@ -1,11 +1,10 @@
 <?php
 
-define('MESSAGE2', 'world');
+	define('MESSAGE2', 'world');
 
-
-$message1 = "hello";
-$name = "alvin";
-$age = 19;
+	$message1 = "hello";
+	$name = "alvin";
+	$age = 19;
 ?>
 
 
@@ -19,9 +18,9 @@ $age = 19;
 </head>
 
 <body>
-    <h1><?php echo $message1,MESSAGE2 ?></h1>
-    <p><?php echo "name:",$name ?>
-    <p><?php echo "age:",$age ?>
+    <h1><?php echo $message1, MESSAGE2 ?></h1>
+    <p><?php echo "name:", $name ?>
+    <p><?php echo "age:", $age ?>
 
 </body>
 

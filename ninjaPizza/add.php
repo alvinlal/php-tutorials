@@ -1,55 +1,55 @@
 <?php
 
- include 'config/db_connect.php';
+	include 'config/db_connect.php';
 
- $errors = [
-  'email' => '',
-  'title' => '',
-  'ingredients' => '',
- ];
+	$errors = [
+		'email' => '',
+		'title' => '',
+		'ingredients' => '',
+	];
 
- if (isset($_POST['submit'])) {
-  if (empty($_POST['email'])) {
-   $errors['email'] = 'An email is required';
-  } else {
-   $email = $_POST['email'];
-   if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $errors['email'] = 'Email is not valid';
-   }
-  }
-  if (empty($_POST['title'])) {
-   $errors['title'] = 'A title is required';
-  } else {
-   $title = $_POST['title'];
-   if (!preg_match('/^[a-zA-Z\s]+$/', $title)) {
-    $errors['title'] = 'Title must be letters and spaces only';
-   }
-  }
-  if (empty($_POST['ingredients'])) {
-   $errors['ingredients'] = 'Atleast one ingredient is required';
-  } else {
-   $ingredients = $_POST['ingredients'];
-   if (!preg_match('/^([a-zA-Z\s]+)(,\s*[a-zA-Z\s]*)*$/', $ingredients)) {
-    $errors['ingredients'] = 'Ingredients must be a comma separated list';
-   }
-  }
-  if (array_filter($errors)) {
+	if (isset($_POST['submit'])) {
+		if (empty($_POST['email'])) {
+			$errors['email'] = 'An email is required';
+		} else {
+			$email = $_POST['email'];
+			if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+				$errors['email'] = 'Email is not valid';
+			}
+		}
+		if (empty($_POST['title'])) {
+			$errors['title'] = 'A title is required';
+		} else {
+			$title = $_POST['title'];
+			if (!preg_match('/^[a-zA-Z\s]+$/', $title)) {
+				$errors['title'] = 'Title must be letters and spaces only';
+			}
+		}
+		if (empty($_POST['ingredients'])) {
+			$errors['ingredients'] = 'Atleast one ingredient is required';
+		} else {
+			$ingredients = $_POST['ingredients'];
+			if (!preg_match('/^([a-zA-Z\s]+)(,\s*[a-zA-Z\s]*)*$/', $ingredients)) {
+				$errors['ingredients'] = 'Ingredients must be a comma separated list';
+			}
+		}
+		if (array_filter($errors)) {
 
-  } else {
-   $email = mysqli_real_escape_string($conn, $_POST['email']);
-   $title = mysqli_real_escape_string($conn, $_POST['title']);
-   $ingredients = mysqli_real_escape_string($conn, $_POST['ingredients']);
+		} else {
+			$email = mysqli_real_escape_string($conn, $_POST['email']);
+			$title = mysqli_real_escape_string($conn, $_POST['title']);
+			$ingredients = mysqli_real_escape_string($conn, $_POST['ingredients']);
 
-   $sql = "INSERT INTO pizzas(email,title,ingredients) VALUES('$email','$title','$ingredients')";
+			$sql = "INSERT INTO pizzas(email,title,ingredients) VALUES('$email','$title','$ingredients')";
 
-   if (mysqli_query($conn, $sql)) {
-    header('Location:index.php');
-   } else {
-    echo 'query error: ' . mysqli_error($conn);
-   }
+			if (mysqli_query($conn, $sql)) {
+				header('Location:index.php');
+			} else {
+				echo 'query error: ' . mysqli_error($conn);
+			}
 
-  }
- }
+		}
+	}
 
 ?>
 

@@ -1,7 +1,7 @@
 <?php
 
- include 'names.php';
- require 'names.php';
+	include 'names.php';
+	require 'names.php';
 
 ?>
 

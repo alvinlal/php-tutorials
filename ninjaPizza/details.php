@@ -1,38 +1,38 @@
 <?php
 
- include 'config/db_connect.php';
- if (isset($_POST['delete'])) {
+	include 'config/db_connect.php';
+	if (isset($_POST['delete'])) {
 
-  $id_to_delete = mysqli_real_escape_string($conn, $_POST['id_to_delete']);
+		$id_to_delete = mysqli_real_escape_string($conn, $_POST['id_to_delete']);
 
-  $sql = "DELETE FROM pizzas WHERE id = $id_to_delete";
+		$sql = "DELETE FROM pizzas WHERE id = $id_to_delete";
 
-  if (mysqli_query($conn, $sql)) {
-   header('Location: index.php');
-  } else {
-   echo 'query error: ' . mysqli_error($conn);
-  }
+		if (mysqli_query($conn, $sql)) {
+			header('Location: index.php');
+		} else {
+			echo 'query error: ' . mysqli_error($conn);
+		}
 
- }
- // check GET request id param
- if (isset($_GET['id']) && $_GET['id'] != '') {
+	}
+	// check GET request id param
+	if (isset($_GET['id']) && $_GET['id'] != '') {
 
-  // escape sql chars
-  $id = mysqli_real_escape_string($conn, $_GET['id']);
+		// escape sql chars
+		$id = mysqli_real_escape_string($conn, $_GET['id']);
 
-  // make sql
-  $sql = "SELECT * FROM pizzas WHERE id = $id";
+		// make sql
+		$sql = "SELECT * FROM pizzas WHERE id = $id";
 
-  // get the query result
-  $result = mysqli_query($conn, $sql);
+		// get the query result
+		$result = mysqli_query($conn, $sql);
 
-  // fetch result in array format
-  $pizza = mysqli_fetch_assoc($result);
+		// fetch result in array format
+		$pizza = mysqli_fetch_assoc($result);
 
-  mysqli_free_result($result);
-  mysqli_close($conn);
+		mysqli_free_result($result);
+		mysqli_close($conn);
 
- }
+	}
 
 ?>
 

@@ -1,11 +1,11 @@
 <?php
 
- if (isset($_POST['submit'])) {
+	if (isset($_POST['submit'])) {
 
-  setcookie("gender", $_POST['gender'], time() + 86400);
+		setcookie("gender", $_POST['gender'], time() + 86400);
 
-  header('Location:index.php');
- }
+		header('Location:index.php');
+	}
 
 ?>
 

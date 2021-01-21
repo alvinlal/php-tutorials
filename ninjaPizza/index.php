@@ -1,16 +1,16 @@
 <?php
 
- include 'config/db_connect.php';
+	include 'config/db_connect.php';
 
- $sql = 'SELECT id,title,ingredients FROM pizzas ORDER BY created_at';
+	$sql = 'SELECT id,title,ingredients FROM pizzas ORDER BY created_at';
 
- $result = mysqli_query($conn, $sql);
+	$result = mysqli_query($conn, $sql);
 
- $pizzas = mysqli_fetch_all($result, MYSQLI_ASSOC);
+	$pizzas = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
- mysqli_free_result($result);
+	mysqli_free_result($result);
 
- mysqli_close($conn);
+	mysqli_close($conn);
 
 ?>
 

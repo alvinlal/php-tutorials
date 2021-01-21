@@ -3,16 +3,16 @@
 $file = 'readme.txt';
 
 if (file_exists($file)) {
- echo readfile($file) . '<br/>';
+	echo readfile($file) . '<br/>';
 
- copy($file, 'quotes.txt');
+	copy($file, 'quotes.txt');
 
- echo realpath($file) . '<br/>';
+	echo realpath($file) . '<br/>';
 
- echo filesize($file) . '<br/>';
+	echo filesize($file) . '<br/>';
 
 } else {
- echo 'file does not exist';
+	echo 'file does not exist';
 }
 
 ?>

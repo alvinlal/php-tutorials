@@ -10,12 +10,12 @@
 <body>
     <?php
 
-echo "Hello World" . "\n";
+    	echo "Hello World" . "\n";
 
-echo 'This ', 'string ', 'was ', 'made ', 'with multiple parameters. ';
-echo 'This ' . 'string ' . 'was ' . 'concatenated';
+    	echo 'This ', 'string ', 'was ', 'made ', 'with multiple parameters. ';
+    	echo 'This ' . 'string ' . 'was ' . 'concatenated';
 
-?>
+    ?>
 
 </body>
 

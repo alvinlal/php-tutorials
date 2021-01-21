@@ -1,13 +1,13 @@
 <?php
 
- function sayHello($name = "jane") {
-  echo "Hello {$name}";
- }
- sayHello("alvin");
+	function sayHello($name = "jane") {
+		echo "Hello {$name}";
+	}
+	sayHello("alvin");
 
- function getlist($product) {
-  return "<h1>{$product['name']} costs {$product['price']}</h1>";
- }
+	function getlist($product) {
+		return "<h1>{$product['name']} costs {$product['price']}</h1>";
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">

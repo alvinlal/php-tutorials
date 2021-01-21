@@ -20,9 +20,9 @@ array_push($peopleAge3, 9);
 //associative arrays;
 
 $ninjasOne = [
-    'shaun' => 'black',
-    'mario' => 'orange',
-    'luigi' => 'brown',
+	'shaun' => 'black',
+	'mario' => 'orange',
+	'luigi' => 'brown',
 ];
 
 $ninjasOne['peach'] = 'pink';

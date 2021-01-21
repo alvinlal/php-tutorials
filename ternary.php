@@ -1,5 +1,5 @@
 <?php
- $score = 50;
+	$score = 50;
 ?>
 
 <!DOCTYPE html>
