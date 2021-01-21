@@ -1,0 +1,15 @@
+{
+    "name": "alvin/slugify",
+    "description": "an app to convert page titles to url paths",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "alvinlal",
+            "email": "alvinzzz2001@gmail.com"
+        }
+    ],
+    "require": {
+        "cocur/slugify": "^4.0"
+    }
+}
