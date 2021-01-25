@@ -3,11 +3,11 @@
 	include_once 'mysql_connection.php';
 	$success = false;
 	if (isset($_POST['submit'])) {
-		$firstName = $_POST['first'];
-		$lastName = $_POST['last'];
-		$email = $_POST['email'];
-		$username = $_POST['username'];
-		$password = $_POST['password'];
+		$firstName = mysqli_real_escape($_POST['first']);
+		$lastName = mysqli_real_escape($_POST['last']);
+		$email = mysqli_real_escape($_POST['email']);
+		$username = mysqli_real_escape($_POST['username']);
+		$password = mysqli_real_escape($_POST['password']);
 		// echo $firstName . '<br>';
 		// echo $email . '<br>';
 		// echo $username . '<br>';
