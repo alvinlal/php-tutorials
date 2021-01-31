@@ -1,0 +1,17 @@
+{
+    "name": "alvin/auto-load-classes-with-composer",
+    "description": "An example for autoloading classes and all with composer",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "alvinlal",
+            "email": "alvinzzz2001@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "app\\":"."
+        }
+    },
+    "require": {}
+}
