@@ -1,0 +1,12 @@
+{
+    "name": "alvin/php-envs",
+    "authors": [
+        {
+            "name": "alvinlal",
+            "email": "alvinzzz2001@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.3"
+    }
+}
